@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import EntryParent from './components/EntryParents';
 import { Template } from './pages/_template';
 import { HomePage } from './pages/HomePage';
+import { EntryViewPage } from './pages/EntryViewPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,8 +22,8 @@ root.render(
           <Route path='/' element={<Template />}>
             {/* Shows ALL posts as read-only */}
             <Route index element={<HomePage />} />
-            {/* Show individual post with edit toggle
-            <Route path='/view/:id' element={<EntryPage />}/>
+            {/* Show individual post with edit toggle */}
+            <Route path='/view/:id' element={<EntryViewPage />}/>
             {/* Show a form to make a new post */}
             {/* <Route path='/create' element={<NewEntryPage />} /> */}
 

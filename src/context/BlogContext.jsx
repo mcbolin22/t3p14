@@ -20,7 +20,7 @@ export const JournalDispatchContext = createContext(null);
 
 // Hook to read global data
 export function UseJournalData(){
-    console.log("Journal data is being accessed");
+    // console.log("Journal data is being accessed");
     return useContext(JournalDataContext);
 }
 
