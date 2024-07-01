@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BlogProvider } from './context/BlogContext';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import EntryForm from './components/EntryForm';
-import EntryParent from './components/EntryParents';
+// import EntryForm from './components/EntryForm';
+// import EntryParent from './components/EntryParents';
 import { Template } from './pages/_template';
 import { HomePage } from './pages/HomePage';
 
