@@ -15,15 +15,16 @@ function App() {
     // setJournalEntries(currentJournalEntries);
 
     setJournalEntries([...journalEntries, { title, author, content, date }] )
+    setStoredEntries([...journalEntries, { title, author, content, date }] )
   }
 
   useEffect(() => {
     setJournalEntries(storedEntries);
 
-    return (() => {
-      setStoredEntries(journalEntries);
-    });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  //   return (() => {
+  //     setStoredEntries(journalEntries);
+  //   });
+  // // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
