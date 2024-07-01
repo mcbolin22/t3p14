@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+// eslint-disable-next-line
 {/* <h1>{props.entryData.title}</h1>
 <h4>{props.entryData.author}</h4>
 <h6>{props.entryData.date}</h6>
@@ -24,7 +25,7 @@ export default function EntryForm(props){
             <label htmlFor="entryContent">Content:</label>
             <input type="text" name="entryContent" className="entryContent" value={localContent} onChange={(event) => setLocalContent(event.target.value)} />
 
-            <button onClick={() => props.addEntry(localTitle, localAuthor, localContent)}>
+            <button onClick={() => props.addEntry(localTitle, localAuthor, localContent, Date.now(), props.entryData?.id )}>
                 Submit entry
             </button>
 
