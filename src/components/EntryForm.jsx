@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useJournalDispatch } from "../context/BlogContext";
+import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line
 {/* <h1>{props.entryData.title}</h1>
@@ -17,6 +18,13 @@ export default function EntryForm(props){
 
     let addEntry = useJournalDispatch();
 
+    let navigate = useNavigate();
+
+    const submitEntry = () => {
+        addEntry(localTitle, localAuthor, localContent, Date.now(), props.entryData?.id );
+        navigate("/latest");
+    }
+
     return(
         <div>
             <label htmlFor="entryTitle">Title:</label>
@@ -28,7 +36,7 @@ export default function EntryForm(props){
             <label htmlFor="entryContent">Content:</label>
             <input type="text" name="entryContent" className="entryContent" value={localContent} onChange={(event) => setLocalContent(event.target.value)} />
 
-            <button onClick={() => addEntry(localTitle, localAuthor, localContent, Date.now(), props.entryData.id )}>
+            <button onClick={submitEntry}>
                 Submit entry
             </button>
 
