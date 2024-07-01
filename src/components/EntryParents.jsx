@@ -1,12 +1,14 @@
 import { useState } from "react";
+import Entry from "./Entry";
+import EntryForm from "./EntryForm";
 
 export default function EntryParent(props){
 
-    let [editmode, setEditMode] = useState(false);
+    let [editMode, setEditMode] = useState(false);
 
     return(
         <section>
-            {eidtMode ? <Entryform entryData={props.entryData}/> : <Entry entryData={props.entryData} /> }
+            {editMode ? <EntryForm entryData={props.entryData} addEntry={props.addEntry} /> : <Entry entryData={props.entryData} /> }
 
             <button onClick={() => setEditMode(!editMode)}>
                 Toggle Edit Mode
